@@ -19,6 +19,7 @@ class App extends React.PureComponent {
       <Fragment>
         <View style={styles.sbf9e8383}>
           <Text style={styles.scf51b121}>{`Hello, world!`}</Text>
+          <Text style={styles.scf51b121}>Apps Version 1.2</Text>
         </View>
       </Fragment>
     );
