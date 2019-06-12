@@ -24,7 +24,8 @@ class App extends React.PureComponent {
       <Fragment>
         <View style={styles.sbf9e8383}>
           <Text style={styles.scf51b121}>{`Hello, world!`}</Text>
-          <Text style={styles.smallerFont}>Apps Version 1.3 with code push</Text>
+          <Text style={styles.smallerFont}>Apps Version 2.0</Text>
+          <Text style={styles.smallerFont}>Updated via code push cli</Text>
         </View>
       </Fragment>
     );
