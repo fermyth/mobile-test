@@ -1,3 +1,4 @@
 <resources>
+	<string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">rPURTkHUQ6D82wn5cAkOB9WHhDivr1P-VoARE</string>
     <string name="app_name">TestLaska</string>
 </resources>
