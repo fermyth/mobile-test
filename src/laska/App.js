@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import PhoneNumberScreen from "./Screen/PhoneNumberScreen";
+import PhoneNumberScreen from "./PhoneNumberScreen";
 import { createStackNavigator } from "react-navigation";
 
 const StackNavigator5c15b84d = createStackNavigator({
