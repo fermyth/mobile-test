@@ -36,6 +36,7 @@ class PhoneNumberScreen extends React.PureComponent {
 
   componentDidMount(){
     console.log("FERMYTH PhoneNumberScreen");
+    this.props.navigation.navigate('DashboardScreen');
   }
 
   render() {
