@@ -1,16 +1,27 @@
 import React, { Fragment } from "react";
 import PhoneNumberScreen from "./PhoneNumberScreen";
+import DashboardScreen from "./DashboardScreen";
 import firebase from 'react-native-firebase';
 import { createStackNavigator } from "react-navigation";
+import codePush from "react-native-code-push";
 
 
 const StackNavigator5c15b84d = createStackNavigator({
   PhoneNumberScreen: {
     screen: PhoneNumberScreen,
+      navigationOptions: ({ navigation }) => ({
+        title: "PhoneNumberScreen"
+      })
+  },
+  DashboardScreen:{
+    screen: DashboardScreen,
     navigationOptions: ({ navigation }) => ({
-      title: "PhoneNumberScreen"
+      title: "Dashboard Screen"
     })
   }
+},
+{
+  initialRouteName: 'DashboardScreen',
 });
 
 
@@ -34,22 +45,30 @@ const kittensApp = firebase.initializeApp(
   'kittens',
 );
 
-// dynamically created apps aren't available immediately due to the
-// asynchronous nature of react native bridging, therefore you must
-// wait for an `onReady` state before calling any modules/methods
-// otherwise you will most likely run into `app not initialized` exceptions
-kittensApp.onReady().then((app) => {
-   // --- ready ---
-   console.log("FERMYTH", "DONE");
-   // use `app` arg, kittensApp var or `app('kittens')` to access modules
-   // and their methods. e.g:
-   firebase.app('kittens').auth().signInAnonymously().then((user) => {
-       console.log('FERMYTH kittensApp user ->', user.toJSON());
-   });
-});
+
+
 
 class App extends React.PureComponent {
     
+  componentDidMount() {
+    
+    // dynamically created apps aren't available immediately due to the
+  // asynchronous nature of react native bridging, therefore you must
+  // wait for an `onReady` state before calling any modules/methods
+  // otherwise you will most likely run into `app not initialized` exceptions
+  kittensApp.onReady().then((app) => {
+    // --- ready ---
+    console.log("FERMYTH", "DONE");
+    // use `app` arg, kittensApp var or `app('kittens')` to access modules
+    // and their methods. e.g:
+    
+    firebase.app('kittens').auth().signInAnonymously().then((user) => {
+        console.log('FERMYTH kittensApp user ->', user.toJSON());
+        console.log("FERMYTH2", "DONE");
+    });
+    console.log("FERMYTH3", "DONE");
+  });
+}
 
   render() {
     return (
@@ -61,5 +80,7 @@ class App extends React.PureComponent {
 }
 
 App.defaultProps = {};
+
+// App = codePush(App);
 
 export default App;

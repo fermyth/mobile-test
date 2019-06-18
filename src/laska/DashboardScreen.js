@@ -1,7 +1,5 @@
-import React, { Fragment } from "react";
+import React, { Fragment, Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
-
-import codePush from "react-native-code-push";
 
 const styles = StyleSheet.create({
   scf51b121: {
@@ -18,7 +16,19 @@ const styles = StyleSheet.create({
   }
 });
 
-class DashboardScreen extends React.PureComponent {
+class DashboardScreen extends Component {
+
+
+  constructor(props) {
+    super(props);
+    
+  }
+
+  componentDidMount(){
+    //this.props.navigation.navigate('PhoneNumberScreen');
+    console.log("dashboardscreen");
+  }
+
   render() {
     return (
       <Fragment>
@@ -32,10 +42,8 @@ class DashboardScreen extends React.PureComponent {
   }
 }
 
-App.defaultProps = {};
+DashboardScreen.defaultProps = {};
 
-App = codePush(App);
-
-export default App;
+export default DashboardScreen;
 
 export { styles };
