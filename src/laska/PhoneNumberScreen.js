@@ -33,6 +33,11 @@ const styles = StyleSheet.create({
 });
 
 class PhoneNumberScreen extends React.PureComponent {
+
+  componentDidMount(){
+    console.log("FERMYTH PhoneNumberScreen");
+  }
+
   render() {
     return (
       <Fragment>

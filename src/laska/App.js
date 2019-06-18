@@ -21,7 +21,7 @@ const StackNavigator5c15b84d = createStackNavigator({
   }
 },
 {
-  initialRouteName: 'DashboardScreen',
+  initialRouteName: 'PhoneNumberScreen',
 });
 
 
